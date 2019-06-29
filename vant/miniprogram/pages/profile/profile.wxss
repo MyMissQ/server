@@ -1,0 +1,24 @@
+.profile{
+  background:#e54847;
+  height:400rpx;
+  position:relative;
+  width: 100%;
+}
+.profile-img{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform:  translate(-50%,60rpx);
+}
+.profile-name{
+  
+  font-size:36rpx;
+  color:#Fff;
+  position:absolute;
+  left: 50%;
+  transform:translate(-50%,300rpx);
+}

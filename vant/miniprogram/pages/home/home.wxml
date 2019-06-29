@@ -1,0 +1,25 @@
+<view class='moive'wx:for="{{list}}" wx:key="index">
+<!-- 电影图片 -->
+  <image class='moive-img' src='{{item.images.large}}'></image>
+  <!-- 电影介绍 -->
+  <view class='moive-info'>
+  <!-- 电影标题 -->
+  <view class='moive-title'>{{item.title}}</view>
+  <!-- 观众评分 -->
+  <view>观众评分:
+      <text class='moive-score'>{{item.rating.average}}</text>
+  </view>
+  
+  <!-- 主演:多位 -->
+  <view>主演:
+     <text wx:for="{{item.casts}}" wx:key="index">
+        <text>{{item.name}} <text wx:if='{{!(index>1)}}'>-</text> 
+        </text> 
+          </text> 
+  </view>
+  <!-- 年份 -->
+  <view>年份:{{item.mainland_pubdate}}</view>
+  <!-- 详情按钮 -->
+  <button class='moive-comment' bindtap="jumpComment" data-id="{{item.id}}">电影详情</button>
+  </view>
+</view>

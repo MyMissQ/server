@@ -1,0 +1,17 @@
+<view class='movielist'>
+</view>
+<view class='upload'>
+<van-cell-group>
+      <van-field
+        value="{{content}}"
+        placeholder="喜欢的电影"
+        bind:change="onConentChange"
+      />
+    </van-cell-group>
+
+    <van-button type="primary" size='large' bindtap="uploadImg">上传图片</van-button>
+      <van-button type="danger" size='large' bindtap="onSubmit">提交</van-button>
+</view>
+
+
+

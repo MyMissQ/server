@@ -1,0 +1,54 @@
+<view class='detail-container' style='background:url({{detail.images.large}}) no-repeat top/cover ;'></view>
+<view class='detail-mask'></view>
+<!-- 电影的图片 -->
+<!-- 电影的介绍 -->
+<view class='detail-info'>
+<image src='{{detail.images.large}}' class='detail-img'></image>
+
+<!-- 右侧区域 -->
+<view class='detail'>
+<!-- 电影的标题-->
+<view class='detail-nm'>{{detail.title}}</view>
+<!-- 电影的源标题 -->
+<view>{{detail.original_title}}</view>
+<!-- 电影的打分 -->
+<view class='detail-sc'>{{detail.rating.average}}分</view>
+
+<!-- 电影国家 -->
+<view>导演:{{detail.directors[0].name}}</view>
+</view>
+<!-- 电影的导演 -->
+</view>
+
+<!-- 电影的描述-->
+
+<view class='desc'>{{detail.summary}}</view>
+<!-- 评论 -->
+<view  class='corse'>
+  留言:<van-cell-group>
+ <van-field
+    value="{{content}}"
+    placeholder="请留下您的
+    bind:change="onChange"
+  />
+</van-cell-group>
+</view>
+<!-- 评分 -->
+<van-rate
+  value="{{score}}"
+  bind:change="onContentChange"
+/>
+
+<!-- 打分 -->
+
+   <image  wx:for="{{images}}" wx:key="index" class='comment-img' src="{{item}}"></image>
+
+<!-- 上传图片-->
+<van-button type="primary" bindtap='uploadImg'>上传图片</van-button>
+<!-- 图片列表-->
+
+<!-- 提交评价 -->
+<van-button type="info" class='info-Btn' bindtap='onSubmit'>提交</van-button>
+
+
+
